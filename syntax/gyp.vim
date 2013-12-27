@@ -16,8 +16,8 @@ syn match   gypLineComment      "#.*" contains=@Spell,gypCommentTodo
 syn region  gypStringS          start=+'+  end=+'\|$+  contains=gypSection,gypTargetSection
 syn match   gypNumber           "-\=\<\d\+L\=\>\|0[xX][0-9a-fA-F]\+\>"
 
-syn keyword gypSection          variables includes targets conditions target_defaults
-syn keyword gypTargetSection    actions all_dependent_settings configurations defines dependencies direct_dependent_settings include_dirs libraries link_settings sources target_conditions target_name type msvs_props xcode_config_file xcode_framework_dirs mac_bundle_resources xcode_settings
+syn keyword gypSection          variables includes targets conditions target_defaults postbuilds
+syn keyword gypTargetSection    actions all_dependent_settings configurations defines dependencies direct_dependent_settings include_dirs libraries link_settings sources target_conditions target_name type msvs_props xcode_config_file xcode_framework_dirs mac_bundle_resources xcode_settings postbuild_name actions
 
 if exists("gyp_fold")
     syn match gypFunction "\<function\>"
