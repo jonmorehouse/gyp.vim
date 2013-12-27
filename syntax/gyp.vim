@@ -65,9 +65,6 @@ syn match   jsonCommentError  "\(/\*\)\|\(\*/\)"
 " Syntax: No semicolons in JSON
 syn match   jsonSemicolonError  ";"
 
-" Syntax: No trailing comma after the last element of arrays or objects
-syn match   jsonCommaError  ",\_s*[}\]]"
-
 " ********************************************** END OF ERROR WARNINGS
 " Allowances for JSONP: function call at the beginning of the file,
 " parenthesis and semicolon at the end.
