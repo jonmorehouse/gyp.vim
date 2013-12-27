@@ -13,6 +13,8 @@ endif
 " declare the extension type
 let ext = expand("%:e")
 
+echo "TEST"
+
 syn keyword gypCommentTodo      TODO FIXME XXX TBD contained
 syn match   gypLineComment      "#.*" contains=@Spell,gypCommentTodo
 
@@ -24,13 +26,12 @@ syn match   gypNumber           "-\=\<\d\+L\=\>\|0[xX][0-9a-fA-F]\+\>"
 if ext == "gyp"
 
 	syn keyword gypSection          variables includes targets conditions target_defaults
-	syn keyword gypTargetSection    actions all_dependent_settings configurations defines dependencies direct_dependent_settings include_dirs libraries link_settings sources target_conditions target_name type msvs_props xcode_config_file xcode_framework_dirs mac_bundle_resources xcode_settings postbuilds
+	syn keyword gypTargetSection    actions all_dependent_settings configurations defines dependencies direct_dependent_settings include_dirs libraries link_settings sources target_conditions target_name type msvs_props xcode_config_file xcode_framework_dirs mac_bundle_resources xcode_settings postbuilds product_name mac_bundle
 
 else
 
-	syn keyword gypSection          variables includes targets conditions target_defaults
-	syn keyword gypTargetSection    actions all_dependent_settings configurations defines dependencies direct_dependent_settings include_dirs libraries link_settings sources target_conditions target_name type msvs_props xcode_config_file xcode_framework_dirs mac_bundle_resources xcode_settings postbuild_name action includes postbuild variables postbuilds mac_bundle
-
+	syn keyword gypSection         actions all_dependent_settings configurations defines dependencies direct_dependent_settings include_dirs libraries link_settings sources target_conditions target_name type msvs_props xcode_config_file xcode_framework_dirs mac_bundle_resources xcode_settings postbuild_name action includes postbuild variables postbuilds mac_bundle product_name
+	syn keyword gypTargetSection    
 endif
 
 if exists("gyp_fold")
