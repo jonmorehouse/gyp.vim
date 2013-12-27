@@ -29,6 +29,18 @@ Here is a screenshot of it running in
 
 ![](https://github.com/kelan/gyp.vim/raw/master/doc/example_screenshot.png)
 
+Gyp vs Gypi Syntax
+------------------
+
+Gyp
+-
+
+![]((https://github.com/kelan/gyp.vim/raw/master/doc/gyp_screenshot.png)
+
+Gypi
+-
+
+![]((https://github.com/kelan/gyp.vim/raw/master/doc/gypi_screenshot.png)
 
 Installation
 ------------
